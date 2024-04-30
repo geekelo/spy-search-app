@@ -63,30 +63,30 @@ font-size: 5rem;
 }
 
 .nav-links {
-  text-decoration: none;
-  color: grey;
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.analytics-link {
-  border: 1px solid grey;
-  border-radius: 2rem;
-  margin-left: 1rem;
-}
-
-.home-link {
-    font-size: 3rem;
-}
-
-.nav-links.active,
-.nav-links:hover {
-  color: #431695;
-  border-color: #431695;
-  background-color: #e4e4e4;
-  border-radius: 2rem;
-}
+    text-decoration: none;
+    color: grey;
+    margin: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    position: relative; /* Ensure proper positioning of pseudo-element */
+  }
+  
+  .nav-links::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 3px; /* Border thickness */
+    background-color: #431695;
+    transition: width 0.5s ease; /* Transition width property for fade-in effect */
+  }
+  
+  .nav-links.active::before,
+  .nav-links:hover::before {
+    width: 100%; /* Set width to 100% to fade in from left to right */
+  }
 
 footer {
   background-color: #e4e4e4;
