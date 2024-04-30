@@ -37,10 +37,11 @@ body {
 .topbottom-bar {
   font-weight: 400;
   font-style: normal;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   height: 10vh;
+  z-index: 2;
 }
 
 navbar {
@@ -53,7 +54,6 @@ navbar {
   padding-top: 1.7rem;
   padding-right: 5rem;
   padding-left: 5rem;
-
 }
 
 #logo {

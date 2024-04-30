@@ -1,7 +1,28 @@
 <!-- app/views/analytics/index.html.erb -->
-<h1>All IP Addresses</h1>
-<ul>
-  <% @ip_addresses.each do |ip_address| %>
-    <li><%= link_to ip_address, analytics_queries_path(ip_address: ip_address) %></li>
-  <% end %>
-</ul>
+
+<!-- display total number of ip addresses and total number of queries -->
+<section class="analytics-section">
+  <div class="total-count-section">
+    <p class="total-count"><span class="total-count-texts">Total IP Addresses: </span><span class="total-count-numbers"><%= @total_ip_addresses %></span></p>
+    <p class="total-count"><span class="total-count-texts">Total Queries:</span><span class="total-count-numbers"> <%= @total_queries %></span></p>
+  </div>
+  <div>
+    <h2 class="ip-addresses-title">All IP Addresses</h2>
+    <ul class="ip-addresses-section">
+      <li class="lists lists-titles">
+        <h2 class="list-ids">ID</h2>
+        <h2>IP ADDRESS</h2>
+      </li>
+      <% @ip_addresses.each_with_index do |ip_address, index| %>
+        <li class="lists list-contents">
+          <p class="list-ids"><%= index + 1 %></p>
+          <p>
+            <%= link_to ip_address, analytics_queries_path(ip_address: ip_address), class: 'ip-links' %>
+            <%= link_to 'See queries⬀', analytics_queries_path(ip_address: ip_address), class: 'see-more-link' %>
+          </p>
+        </li>
+      <% end %>
+             
+    </ul>
+  </div>
+</section>
