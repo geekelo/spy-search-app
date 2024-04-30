@@ -1,2 +1,18 @@
-<h1>Analytics#queries</h1>
-<p>Find me in app/views/analytics/queries.html.erb</p>
+<!-- app/views/analytics/queries.html.erb -->
+<h1>Queries for <%= @ip_address %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Query</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @search_logs.each do |query, count| %>
+      <tr>
+        <td><%= query %></td>
+        <td><%= count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

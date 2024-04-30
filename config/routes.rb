@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/search/record_search', to: 'search#record_search'
 
   get 'analytics', to: 'analytics#index'
+  get 'analytics/queries', to: 'analytics#queries'
 
   # Defines the root path route as the search page ("/")
   root "search#index"
