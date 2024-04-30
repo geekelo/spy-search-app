@@ -1,0 +1,6 @@
+<h1>All IP Addresses</h1>
+<ul>
+  <% @ip_addresses.each do |ip_address| %>
+    <li><%= link_to ip_address, analytics_queries_path(ip_address: ip_address) %></li>
+  <% end %>
+</ul>
