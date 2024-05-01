@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let typingTimer;
 
   // Define the time interval (in milliseconds) after which user input is considered complete.
-  const typingInterval = 5000;
+  const typingInterval = 1000;
 
   // Function to handle user input change events.
   function handleInputChange(event) {
