@@ -1,21 +1,21 @@
 .analytics-section {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: #000;
-    padding-bottom: 110vh;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #000;
+  padding-bottom: 110vh;
 }
 
 .total-count-section {
-    display: flex;
-    background-color: #e4e4e4;
-    border-radius: 6px;
-    width: 90%;
-    height: 20vh;
-    margin: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  display: flex;
+  background-color: #e4e4e4;
+  border-radius: 6px;
+  width: 90%;
+  height: 20vh;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 .total-count {
@@ -28,13 +28,12 @@
 .total-count-texts {
   font-size: 1rem;
   text-align: center;
-
 }
 
 .total-count-numbers {
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .ip-addresses-section {
@@ -48,41 +47,41 @@
 }
 
 .ip-addresses-title {
-    color: #fff;
-    text-align: center;
-    width: 100%;
+  color: #fff;
+  text-align: center;
+  width: 100%;
 }
 
 .lists {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    width: 100%;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
 }
 
 .lists-titles {
-    background-color: #000;
+  background-color: #000;
 }
 
 .list-contents {
-    background-color: #e4e4e4;
-    margin: auto;
-    color: #000;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: bold;
+  background-color: #e4e4e4;
+  margin: auto;
+  color: #000;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .list-ids {
-    width: 50%;
-    text-align: left;
+  width: 50%;
+  text-align: left;
 }
 
 .ip-links {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .see-more-link {
@@ -104,7 +103,3 @@
   width: 30%;
   text-align: center;
 }
-
-@media only screen and (max-width: 768px) {
-
-  }
