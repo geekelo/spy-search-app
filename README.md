@@ -42,12 +42,14 @@
 ## Real-time Search Input Recording:
 To record search inputs in real-time, the Spy Search App employs techniques such as AJAX requests. Here's a simplified explanation of how it works:
 
-**Client-Side Interaction:** When a user performs a search on the platform, JavaScript code on the frontend captures the search query. when a user types into the search bar, the input value is recorded immediately and a 5secs timer kicks in. Based on online researches, a user can be assumed to have concluded typing a sentence after a 5 seconds pause. Therefore, the timer is made to restart when the user resumes typing before the 5secs timer elapses, the new input value replaces the former. In the absence of a new input value after the 5 secs timer elapses, an automatic AJAX request is made.
+**Client-Side Interaction:** When a user performs a search on the platform, a JavaScript code on the frontend captures the search query. When a user types into the search bar, the input value is recorded immediately and a 5secs timer kicks in.
+Based on online researches made, a user can be assumed to have concluded typing a sentence after a 5 seconds pause. Therefore, the timer is made to restart when the user resumes typing before the 5secs timer elapses, then the new input value replaces the former.
+In the absence of a new input value after the 5 secs timer elapses, an automatic AJAX request is made.
 **AJAX Request:** The frontend sends an AJAX request to the backend server, containing the search query data.
 **Backend Processing:** The backend server receives the AJAX request, processes the search query, and stores it in the database.
 
 ## Live Demo & Presentation <a name="live-demo">
-[LIVE DEMO](https://cash-in-out-qoka.onrender.com/)
+[LIVE DEMO](https://spy-search-app.onrender.com)
 
 <!-- Video Presentation -->
 ## Video Presentation <a name="video-presentation"></a>
