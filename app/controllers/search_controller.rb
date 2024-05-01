@@ -6,6 +6,12 @@ class SearchController < ApplicationController
     query = params[:query]
     ip_address = request.remote_ip
 
+    # Ensure that the query parameter is present
+    if query.blank?
+      render json: { status: 'error', message: 'Query parameter is required' }, status: :unprocessable_entity
+      return
+    end
+
     # Create a new SearchLog record with the query and IP address
     search_log = SearchLog.new(query: query, ip_address: ip_address)
 
@@ -16,4 +22,3 @@ class SearchController < ApplicationController
     end
   end
 end
-
