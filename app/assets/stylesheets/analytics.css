@@ -1,0 +1,105 @@
+.analytics-section {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #000;
+  padding-bottom: 80rem;
+}
+
+.total-count-section {
+  display: flex;
+  background-color: #e4e4e4;
+  border-radius: 6px;
+  width: 90%;
+  height: 20vh;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.total-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.total-count-texts {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.total-count-numbers {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ip-addresses-section {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+  justify-content: center;
+}
+
+.ip-addresses-title {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+
+.lists-titles {
+  background-color: #000;
+}
+
+.list-contents {
+  background-color: #e4e4e4;
+  margin: auto;
+  color: #000;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.list-ids {
+  width: 50%;
+  text-align: left;
+}
+
+.ip-links {
+  color: #000;
+  text-decoration: none;
+}
+
+.see-more-link {
+  font-style: italic;
+  color: grey;
+}
+
+.query-ids {
+  width: 10%;
+  text-align: center;
+}
+
+.query {
+  width: 60%;
+  text-align: left;
+}
+
+.query-count {
+  width: 30%;
+  text-align: center;
+}

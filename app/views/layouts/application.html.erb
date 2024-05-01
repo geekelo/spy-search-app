@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'mobilemenu', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+    <%= stylesheet_link_tag 'search', "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'analytics', "data-turbo-track": "reload" %>
+    </head>
 
   <body>
+    <nav class="topbottom-bar">
+    <%= link_to '❂', root_path, id: 'logo' %>
+    <button id="menu-icon"  class="menu-btns">☰</button>
+      <div id="menu-section" class="menu-section">
+        <button id="close-icon" class="menu-btns">X</button>
+        <%= link_to 'Home', root_path, class: 'nav-links home-link' %>
+        <%= link_to 'Analytics', analytics_path, class: 'nav-links analytics-link' %>
+        <button id="backButton" class="nav-links">&#60; Back</button>
+      </div>
+    </nav>
+
     <%= yield %>
+
+    <footer class="topbottom-bar">
+      <p>Made with ❤️ from Spy Search</p>
+    </footer>
   </body>
 </html>
