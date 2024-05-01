@@ -11,7 +11,7 @@ RSpec.describe AnalyticsController, type: :controller do
 
     it 'assigns @total_queries' do
       get :index
-      expect(assigns(:total_queries)).to eq(SearchLog.distinct.pluck(:query).count 0)
+      expect(assigns(:total_queries)).to eq(SearchLog.distinct.pluck(:query).count(0))
     end
   end
 
