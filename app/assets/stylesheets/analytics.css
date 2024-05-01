@@ -4,7 +4,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color: #000;  
+    color: #000;
+    padding-bottom: 110vh;
 }
 
 .total-count-section {
@@ -37,10 +38,13 @@
 }
 
 .ip-addresses-section {
+  display: flex;
+  flex-direction: column;
   color: #fff;
   width: 90%;
   margin: auto;
   padding: 0;
+  justify-content: center;
 }
 
 .ip-addresses-title {
@@ -84,6 +88,21 @@
 .see-more-link {
   font-style: italic;
   color: grey;
+}
+
+.query-ids {
+  width: 10%;
+  text-align: center;
+}
+
+.query {
+  width: 60%;
+  text-align: left;
+}
+
+.query-count {
+  width: 30%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

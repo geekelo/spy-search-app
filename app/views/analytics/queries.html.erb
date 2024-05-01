@@ -1,18 +1,25 @@
 <!-- app/views/analytics/queries.html.erb -->
-<h1>Queries for <%= @ip_address %></h1>
-<table>
-  <thead>
-    <tr>
-      <th>Query</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @search_logs.each do |query, count| %>
-      <tr>
-        <td><%= query %></td>
-        <td><%= count %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<section class="analytics-section">
+  <h2 class="ip-addresses-title">Queries for <%= @ip_address %></h2>
+  <div class="total-count-section">
+    <p class="total-count"><span class="total-count-texts">Total unique queries: </span><span class="total-count-numbers"><%= @total_unique_queries %></span></p>
+    <p class="total-count"><span class="total-count-texts">Total Queries:</span><span class="total-count-numbers"> <%= @total_ip_queries %></span></p>
+  </div>
+
+  <div>
+    <ul class="ip-addresses-section">
+      <li class="lists lists-titles">
+        <h2 class="query-ids">ID</h2>
+        <h2 class="query">QUERY</h2>
+        <h2 class="query-count">COUNT</h2>
+      </li>
+      <% @search_logs.each_with_index do |(query, count), index| %>
+        <li class="lists list-contents">
+          <p class="query-ids"><%= index + 1 %></p>
+          <p class="query"><%= query %></p>
+          <p class="query-count"><%= count %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>

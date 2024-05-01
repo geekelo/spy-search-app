@@ -34,26 +34,21 @@ body {
   }
 }
 
-.topbottom-bar {
-  font-weight: 400;
-  font-style: normal;
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 10vh;
-  z-index: 2;
-}
-
 navbar {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  top: 0;
   font-weight: 600;
   text-align: right;
   padding-top: 1.7rem;
   padding-right: 5rem;
   padding-left: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  z-index: 2;
 }
 
 #logo {
@@ -105,6 +100,12 @@ footer {
   color: grey;
   text-align: center;
   bottom: 0;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media only screen and (max-width: 768px) {
