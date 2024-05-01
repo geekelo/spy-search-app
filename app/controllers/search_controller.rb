@@ -21,11 +21,12 @@ class SearchController < ApplicationController
     else
       # Create a new search log entry
       search_log = SearchLog.new(query: query, ip_address: ip_address)
-      
+
       if search_log.save
         render json: { status: 'success', message: 'New query saved successfully' }
       else
-        render json: { status: 'error', message: search_log.errors.full_messages.join(', ') }, status: :unprocessable_entity
+        render json: { status: 'error', message: search_log.errors.full_messages.join(', ') },
+               status: :unprocessable_entity
       end
     end
   end
