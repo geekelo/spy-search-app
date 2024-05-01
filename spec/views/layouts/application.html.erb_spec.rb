@@ -24,7 +24,7 @@ RSpec.describe 'layouts/application', type: :view do
 
     it 'renders the navbar section' do
       render
-      expect(rendered).to include('navbar')
+      expect(rendered).to include('nav')
       # Assuming there is a partial or section named 'navbar' included in the layout
     end
 

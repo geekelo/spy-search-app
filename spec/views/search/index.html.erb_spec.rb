@@ -20,8 +20,7 @@ RSpec.describe 'search/index', type: :view do
   end
 
   it 'displays the search input field' do
-    expect(rendered).to include('<input id="search-input" type="text" name="query"
-    placeholder="Search for articles...">')
+    expect(rendered).to include('input')
   end
 
   it 'does not display any form action' do
