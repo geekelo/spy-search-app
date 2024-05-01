@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingInterval = 5000;
 
     function handleInputChange(event) {
-        userInput = event.target.value.trim();
+        event.preventDefault();
+        userInput = event.target.value.toLowerCase().trim();
         clearTimeout(typingTimer);
         typingTimer = setTimeout(submitInput, typingInterval);
     }
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => {
                 if (response.ok) {
                     console.log('Search query recorded successfully');
+                    userInput = '';
                 } else {
                     console.error('Failed to record search query:', response.statusText);
                 }

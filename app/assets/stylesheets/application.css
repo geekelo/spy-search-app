@@ -70,6 +70,8 @@ text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
     padding-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
     position: relative; /* Ensure proper positioning of pseudo-element */
   }
   
