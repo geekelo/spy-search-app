@@ -3,7 +3,7 @@ class AnalyticsController < ApplicationController
     @ip_addresses = SearchLog.distinct.pluck(:ip_address)
     @total_ip_addresses = @ip_addresses.count
     @queries = SearchLog.distinct.pluck(:query)
-    @total_queries = @queries.count - 1
+    @total_queries = @queries.count
   end
 
   # performs the initial query to retrieve the search logs matching the specified IP address.
