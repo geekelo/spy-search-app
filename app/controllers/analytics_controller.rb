@@ -3,13 +3,14 @@ class AnalyticsController < ApplicationController
     @ip_addresses = SearchLog.distinct.pluck(:ip_address)
     @total_ip_addresses = @ip_addresses.count
     @queries = SearchLog.distinct.pluck(:query)
-    @total_queries = @queries.count  - 1
+    @total_queries = @queries.count - 1
   end
 
   # performs the initial query to retrieve the search logs matching the specified IP address.
   # sorts the search logs by count in descending order.
   # uses manual implementaion on in_batches to batch the sorted search logs as inbatch do not work on arrays.
-  # the in_batches method is not applicable to an array like @search_logs because it's a method provided by ActiveRecord for querying records in batches directly from the database.
+  # the in_batches method is not applicable to an array like @search_logs because it's a method
+  # provided by ActiveRecord for querying records in batches directly from the database.
   # iterates over each batch and combine the search logs into a single hash (combined_search_logs).
   # sorts the combined search logs by count in descending order again.
   def queries

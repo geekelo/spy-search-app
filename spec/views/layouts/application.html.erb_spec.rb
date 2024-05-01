@@ -4,13 +4,12 @@ require 'rails_helper'
 
 RSpec.describe 'layouts/application', type: :view do
   context 'when rendering the layout' do
-
     it 'includes the back' do
       render
       expect(rendered).to include('#60; Back')
       # Verifying if the layout includes a button with id 'backButton', class 'nav-links', and text '&#60; Back'
     end
-    
+
     it 'displays the Home' do
       render
       expect(rendered).to include('Home')

@@ -20,7 +20,7 @@ RSpec.describe 'analytics/index', type: :view do
     expect(rendered).to include('10')
   end
 
-  it 'displays each IP address with a link to see queries' do
+  it 'displays each IP address' do
     expect(rendered).to include('All IP Addresses')
     expect(rendered).to include('ID')
     expect(rendered).to include('IP ADDRESS')

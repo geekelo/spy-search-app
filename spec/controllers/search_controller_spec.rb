@@ -7,9 +7,9 @@ RSpec.describe SearchController, type: :controller do
       let(:valid_params) { { query: 'test query' } }
 
       it 'creates a new SearchLog record' do
-        expect {
+        expect do
           post :record_search, params: valid_params
-        }.to change(SearchLog, :count).by(1)
+        end.to change(SearchLog, :count).by(1)
       end
 
       it 'returns a success status' do
@@ -22,9 +22,9 @@ RSpec.describe SearchController, type: :controller do
       let(:invalid_params) { { query: '' } }
 
       it 'does not create a new SearchLog record' do
-        expect {
+        expect do
           post :record_search, params: invalid_params
-        }.not_to change(SearchLog, :count)
+        end.not_to change(SearchLog, :count)
       end
 
       it 'returns an error status' do
