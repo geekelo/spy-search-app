@@ -91,7 +91,7 @@ The Spy Search App utilizes a modern tech stack to ensure reliability, scalabili
 
 The development of the Spy Search App followed followed a process that involved:
 
-- **Requirements Gathering:** Understanding the needs of the target users and defining features accordingly.
+- **Requirements Gathering:** Understanding the requirements of the project by studying project materials and doing online researches to better implement the required features
 - **Design and Prototyping:** Creating wireframes and prototypes to visualize the user interface and interactions.
 - **Development:** 
   - Code Quality: Writing clean code for frontend and backend components, implementing features through the use of appopriate linters.    
