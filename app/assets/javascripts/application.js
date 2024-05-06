@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let typingTimer;
 
   // Define the time interval (in milliseconds) after which user input is considered complete.
-  const typingInterval = 5000;
+  const typingInterval = 1000;
 
   // Function to handle user input change events.
   function handleInputChange(event) {
@@ -30,16 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function submitInput() {
       // Check if user input is not empty.
       if (userInput !== '') {
-          // Log the user input to the console.
-          console.log('Submitting input:', userInput);
-
           // Prepare the data to send to the Rails controller.
           const requestData = {
               query: userInput
           };
-
-          // Log the request data to the console.
-          console.log(requestData);
 
           // Send an AJAX request to the Rails controller to record the search query.
           fetch('/search/record_search', {
@@ -53,17 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(response => {
               // Check if the response is OK.
               if (response.ok) {
-                  console.log('Search query recorded successfully');
                   // Clear the user input after successful recording.
                   userInput = '';
               } else {
                   // Log an error message if recording fails.
-                  console.error('Failed to record search query:', response.statusText);
+                  throw new Error('Failed to record search query: ' + response.statusText);
               }
           })
           .catch(error => {
               // Log an error message if there's an error during the request.
-              console.error('Error recording search query:', error);
+               throw new Error('Error recording search query: ' + error);
           });
       }
   }
@@ -71,3 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add an event listener to the search input field to handle input changes.
   document.getElementById('search-input').addEventListener('input', handleInputChange);
 });
+  
