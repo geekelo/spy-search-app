@@ -30,16 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function submitInput() {
       // Check if user input is not empty.
       if (userInput !== '') {
-          // Log the user input to the console.
-          console.log('Submitting input:', userInput);
-
           // Prepare the data to send to the Rails controller.
           const requestData = {
               query: userInput
           };
-
-          // Log the request data to the console.
-          console.log(requestData);
 
           // Send an AJAX request to the Rails controller to record the search query.
           fetch('/search/record_search', {
