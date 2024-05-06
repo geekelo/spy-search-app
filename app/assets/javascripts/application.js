@@ -47,17 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(response => {
               // Check if the response is OK.
               if (response.ok) {
-                  console.log('Search query recorded successfully');
                   // Clear the user input after successful recording.
                   userInput = '';
               } else {
                   // Log an error message if recording fails.
-                  console.error('Failed to record search query:', response.statusText);
+                  throw new Error('Failed to record search query: ' + response.statusText);
               }
           })
           .catch(error => {
               // Log an error message if there's an error during the request.
-              console.error('Error recording search query:', error);
+               throw new Error('Error recording search query: ' + error);
           });
       }
   }
@@ -65,3 +64,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add an event listener to the search input field to handle input changes.
   document.getElementById('search-input').addEventListener('input', handleInputChange);
 });
+  
