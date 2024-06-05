@@ -33,6 +33,7 @@
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
+![image](https://github.com/geekelo/spy-search-app/assets/102464578/64415a33-e477-4a7e-939b-e34a43c67e17)
 
 # 📖 Spy Search App <a name="about-project"></a>
 
